@@ -1,18 +1,24 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect, useState , useLayoutEffect } from 'react';
 import '../styles/Nav.css'
 
 
 export default function Nav() {
 
+    // const [show, handleShow] = useState(false);
 
-
-
-
-
-
-
-
+    // useLayoutEffect(() => {
+    //     window.addEventListener("scroll", () => {
+    //         if (window.scrollY > 100) {
+    //             handleShow(true);
+    //         } else {
+    //             handleShow(false);
+    //         }
+    //     });
+    //     return () => {
+    //         window.removeEventListener("scroll");
+    //     };
+    // }, []);
 
     return (
         <>
@@ -28,6 +34,8 @@ export default function Nav() {
                     alt='Avatar'
                 />
             </div>
+            <button className="scroll-to-top" >Scroll to top</button>
+            {/* style={{ display: show ? "block" : "none" }} */}
         </>
     );
 }
